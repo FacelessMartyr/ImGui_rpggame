@@ -1,0 +1,11 @@
+{
+	"cost":30,
+	"rarity":1,
+	"item_type":3,
+	"item_lvl":1,
+	"item_name":"Red Apple",
+	"item_id":300,
+	"base_heal":5,
+	"nutritious":4,
+	"item_condition":1
+}

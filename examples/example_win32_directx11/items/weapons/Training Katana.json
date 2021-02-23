@@ -1,0 +1,12 @@
+{
+	"cost": 300,
+	"rarity":1,
+	"item_type":1,
+	"item_lvl":2,
+	"item_name":"Training Katana",
+	"bphys_attack_dmg":16,
+	"magical_attack_dmg":0,
+	"weapon_type": 2,
+	"item_id": 3,
+	"item_condition":2
+}

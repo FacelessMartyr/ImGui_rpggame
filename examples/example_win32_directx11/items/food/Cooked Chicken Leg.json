@@ -1,0 +1,11 @@
+{
+	"cost":75,
+	"rarity":1,
+	"item_type":3,
+	"item_lvl":1,
+	"item_name":"Cooked Chicken leg",
+	"item_id":303,
+	"base_heal":9,
+	"nutritious":7,
+	"item_condition":1
+}

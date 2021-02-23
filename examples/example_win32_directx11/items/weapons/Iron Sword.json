@@ -1,0 +1,12 @@
+{
+	"cost": 650,
+	"rarity":1,
+	"item_type":1,
+	"item_lvl":3,
+	"item_name":"Iron Sword",
+	"bphys_attack_dmg":20,
+	"magical_attack_dmg":0,
+	"weapon_type": 1,
+	"item_id": 4,
+	"item_condition":2
+}

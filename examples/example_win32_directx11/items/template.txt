@@ -1,0 +1,6 @@
+item_cost
+rarity 1-7
+item_type 1-5
+item_lvl
+item_name
+item_id

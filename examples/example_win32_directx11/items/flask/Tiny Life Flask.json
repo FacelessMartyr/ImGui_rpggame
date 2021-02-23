@@ -1,0 +1,12 @@
+{
+	"cost":30,
+	"rarity":1,
+	"item_type":4,
+	"item_lvl":1,
+	"item_name":"Tiny Life Flask",
+	"item_id":900,
+	"healing":5,
+	"charges":2,
+	"heal_type":1,
+	"item_condition":1
+}
