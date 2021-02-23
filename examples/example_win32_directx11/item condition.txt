@@ -1,0 +1,8 @@
+1Rusty
+2Worn
+3Dull
+4Masterfull
+5Heroic
+6Blessed
+7
+

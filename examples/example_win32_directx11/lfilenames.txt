@@ -1,0 +1,4 @@
+"items/Fenrir Blade.txt"
+"items/Mithril Axe.txt"
+"items/Nekobu Sword.txt"
+"items/lfiles.txt"
