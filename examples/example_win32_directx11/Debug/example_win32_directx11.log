@@ -1,0 +1,22 @@
+﻿  Game_windows.cpp
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(7,28): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(8,28): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(9,44): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(10,45): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(12,27): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(13,27): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(14,43): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(15,44): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(17,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(18,39): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(20,32): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(21,46): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(25,50): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(25,37): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(26,48): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(26,36): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(43,68): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(43,43): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Game_windows.cpp(4,76): warning C4100: CharacterInventory: неиспользованный формальный параметр
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Debug\Game_windows.obj : warning LNK4042: объект указан более одного раза; лишние не учитываются
+  example_win32_directx11.vcxproj -> C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Debug\example_win32_directx11.exe
