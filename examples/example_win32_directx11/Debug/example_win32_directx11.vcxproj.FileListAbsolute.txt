@@ -1,2 +1,1 @@
 C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Debug\example_win32_directx11.exe
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Debug\example_win32_directx11.pdb
