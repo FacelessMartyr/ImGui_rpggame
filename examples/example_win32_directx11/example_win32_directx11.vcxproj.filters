@@ -13,6 +13,9 @@
     <Filter Include="sources\imguiGAME">
       <UniqueIdentifier>{123041d6-e820-46ba-920d-f2e51265517d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="sources\GameFiles\headers">
+      <UniqueIdentifier>{7100b461-2d7a-4e63-a9b7-4888d75964f5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\imconfig.h">
@@ -30,38 +33,38 @@
     <ClInclude Include="..\..\backends\imgui_impl_dx11.h">
       <Filter>sources</Filter>
     </ClInclude>
-    <ClInclude Include="Armour.h">
-      <Filter>sources\GameFiles</Filter>
+    <ClInclude Include="ad_data.h">
+      <Filter>sources\GameFiles\headers</Filter>
     </ClInclude>
     <ClInclude Include="Character.h">
-      <Filter>sources\GameFiles</Filter>
+      <Filter>sources\GameFiles\headers</Filter>
     </ClInclude>
     <ClInclude Include="Flask.h">
-      <Filter>sources\GameFiles</Filter>
+      <Filter>sources\GameFiles\headers</Filter>
     </ClInclude>
     <ClInclude Include="Food.h">
-      <Filter>sources\GameFiles</Filter>
+      <Filter>sources\GameFiles\headers</Filter>
     </ClInclude>
     <ClInclude Include="GameContent.h">
-      <Filter>sources\GameFiles</Filter>
+      <Filter>sources\GameFiles\headers</Filter>
     </ClInclude>
     <ClInclude Include="Inventory.h">
-      <Filter>sources\GameFiles</Filter>
+      <Filter>sources\GameFiles\headers</Filter>
     </ClInclude>
     <ClInclude Include="Item.h">
-      <Filter>sources\GameFiles</Filter>
+      <Filter>sources\GameFiles\headers</Filter>
     </ClInclude>
     <ClInclude Include="Loot.h">
-      <Filter>sources\GameFiles</Filter>
-    </ClInclude>
-    <ClInclude Include="Weapon.h">
-      <Filter>sources\GameFiles</Filter>
-    </ClInclude>
-    <ClInclude Include="ad_data.h">
-      <Filter>sources\GameFiles</Filter>
+      <Filter>sources\GameFiles\headers</Filter>
     </ClInclude>
     <ClInclude Include="r_libs.h">
-      <Filter>sources\GameFiles</Filter>
+      <Filter>sources\GameFiles\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon.h">
+      <Filter>sources\GameFiles\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Armour.h">
+      <Filter>sources\GameFiles\headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -114,15 +117,6 @@
       <Filter>sources\GameFiles</Filter>
     </ClCompile>
     <ClCompile Include="Weapon.cpp">
-      <Filter>sources\GameFiles</Filter>
-    </ClCompile>
-    <ClCompile Include="MainMenu.cpp">
-      <Filter>sources\imguiGAME</Filter>
-    </ClCompile>
-    <ClCompile Include="Game_windows.h">
-      <Filter>sources\GameFiles</Filter>
-    </ClCompile>
-    <ClCompile Include="Game_windows.cpp">
       <Filter>sources\GameFiles</Filter>
     </ClCompile>
   </ItemGroup>

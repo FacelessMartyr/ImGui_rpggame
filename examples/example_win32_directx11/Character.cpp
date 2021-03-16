@@ -16,14 +16,8 @@ int Character::character_gainxp()
     return 0;
 }
 //adding character stats
-void Character::character_addstats()
-{
-	int st_choice = 0;
-	std::cout << statpoints_left << std::endl;
-	if (statpoints_left > 0)
-	{
-		
-		for (int i = 0; i < statpoints_left; )
+
+        /*for (int i = 0; i < statpoints_left; )
 		{
 			if (std::cin >> st_choice)
 			{
@@ -55,8 +49,7 @@ void Character::character_addstats()
 			else
 				break;
 		}
-		std::cout << statpoints_left << std::endl;
-	}
-}
+		std::cout << statpoints_left << std::endl;*/
+
 
 

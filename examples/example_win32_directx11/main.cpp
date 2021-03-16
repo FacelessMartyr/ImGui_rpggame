@@ -2,21 +2,23 @@
 // If you are new to Dear ImGui, read documentation from the docs/ folder + read the top of imgui.cpp.
 // Read online: https://github.com/ocornut/imgui/tree/master/docs
 
-#include "imgui.h"
+
 #include "imgui_impl_win32.h"
 #include "imgui_impl_dx11.h"
 #include <d3d11.h>
 #define DIRECTINPUT_VERSION 0x0800
+#define IM_CLAMP(V, MN, MX)     ((V) < (MN) ? (MN) : (V) > (MX) ? (MX) : (V))
 #include <dinput.h>
 #include <tchar.h>
 
-
+#include "ad_data.h"
 #include "nlohmann/json.hpp"
 #include "r_libs.h"
 
 
+
  
-#include "Game_windows.h"
+
 
 //game func
 
@@ -96,7 +98,13 @@ int main(int, char**)
     bool show_demo_window = true;
     bool show_another_window = false;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
-
+    static vector<ImColor> Menu_col
+    {
+        ImColor(96, 171, 166,255),
+        ImColor(230,222,40,255),
+        ImColor(195, 195, 195, 200),
+        ImColor(80, 200, 80, 200),
+    };
     // Main loop
     MSG msg;
     ZeroMemory(&msg, sizeof(msg));
@@ -144,7 +152,7 @@ int main(int, char**)
             if (no_nav)             window_flags |= ImGuiWindowFlags_NoNav;
             if (no_background)      window_flags |= ImGuiWindowFlags_NoBackground;
             if (no_bring_to_front)  window_flags |= ImGuiWindowFlags_NoBringToFrontOnFocus;
-            if (no_close);        // Don't pass our bool* to Begin
+            if (no_close);     // Don't pass our bool* to Begin
 
             static bool showWindow = true;//menu play exit window
             static bool showCharCr = false;//creating character window
@@ -228,7 +236,7 @@ int main(int, char**)
             static char nickname[30];
             static char hint[]{"Nickname"};
             static int gender = 0;
-            static int items_count;
+
             static const char *  genders[]{ "Male","Female" };
             static string s_info = "Good";
             size_t nn_size = 29;
@@ -258,6 +266,7 @@ int main(int, char**)
                 
                 ImGui::InputTextWithHint("", hint, nickname,nn_size);
                 ImGui::Text("");
+                ImGui::Separator();
                 ImGui::ListBox("Gender",&gender,genders,IM_ARRAYSIZE(genders),2);
 
                 static float mm_fontscacle = float(windowsize.bottom) / 780.0;
@@ -273,7 +282,12 @@ int main(int, char**)
                     //test
                     CharacterList::One->Char_AddItem(4);
                     CharacterList::One->Char_AddItem(3);
+                    CharacterList::One->Char_AddItem(5);
                     CharacterList::One->Char_ShowSlots();
+
+                    
+
+ 
                     //test
                 }
                 
@@ -307,38 +321,149 @@ int main(int, char**)
                 static float addStatButt = double(CrPrBSize_x) / 11.85;
                 addStatButt = double(CrPrBSize_x) / 11.85;
 
-                static float cp_fontscacle = float(windowsize.bottom) / 740.0;
-                cp_fontscacle = float(windowsize.bottom) / 740.0;
+                static float cp_fontscacle = float(windowsize.bottom) / 840.0;
+                cp_fontscacle = float(windowsize.bottom) / 840.0;
 
                 float spacing = ImGui::GetStyle().ItemInnerSpacing.x;
 
-                ImGui::SetNextWindowSize(ImVec2(CrPrBSize_x,CrPrBSize_y));
+                ImGui::SetNextWindowSize(ImVec2(CrPrBSize_x, CrPrBSize_y));
                 ImGui::SetNextWindowPos(ImVec2(CrPrBPos_x, CrPrBPos_y));
                 ImGui::Begin("Profile", 0, window_flags);
                 ImGui::SetWindowFontScale(cp_fontscacle);
-                ImGui::TextColored(ImVec4(255,184,255,0),"Name   %s", CharacterList::One->get_nickname().c_str());
-                ImGui::Text("\tStats");
+                //Profile description
 
-                ImGui::Text("Agility - %d",(CharacterList::One->Get_stats().agility));
-                ImGui::SameLine(0.0f, spacing);
-                ImGui::Button("+",ImVec2(addStatButt, addStatButt));
+                //Table flags
+                static ImGuiTableFlags flags = ImGuiTableFlags_SizingPolicyFixed
+                    | ImGuiTableFlags_Borders
+                    | ImGuiTableFlags_Reorderable
+                    | ImGuiTableFlags_Hideable;
 
-                ImGui::Text("Strength - %d",(CharacterList::One->Get_stats().strength));
-                ImGui::SameLine(0.0f, spacing); 
-                ImGui::Button("+",ImVec2(addStatButt, addStatButt));
+                if (ImGui::BeginTable("##profiledesc", 2, flags))
+                {
+                    
+                    ImGui::TableSetupColumn(" Nickaname ##char", ImGuiTableColumnFlags_WidthFixed);
+                    ImGui::TableSetupColumn(CharacterList::One->get_nickname().c_str(), ImGuiTableColumnFlags_WidthStretch);
+                    ImGui::TableHeadersRow();
 
-                ImGui::Text("Intelligence - %d",(CharacterList::One->Get_stats().intelligence));
-                ImGui::SameLine(0.0f, spacing);
-                ImGui::Button("+",ImVec2(addStatButt, addStatButt));
-                if(ImGui::Button("Inventory", ImVec2(CrPrBSize_x, CrPrBSize_y / 10)))
+                    static int row = 0; static int column = 0;
+                    ImGui::TableNextRow();
+                    //ImGui::TableSetColumnIndex(column);
+                    ImGui::TableNextColumn();
+                    ImGui::TextColored(Menu_col[2], " %s", "Level");
+                    if (ImGui::IsItemHovered())
+                    {
+                        ImGui::BeginTooltip();
+                        ImGui::Text("Xp to the next level - %d", (CharacterList::One->get_char_explvl()) - (CharacterList::One->get_char_exp()));
+                        ImGui::EndTooltip();
+                    }
+                    ImGui::TableNextColumn();
+                    ImGui::TextColored(Menu_col[2], " %d", CharacterList::One->get_char_lvl());
+
+                    ImGui::TableNextRow();
+                    ImGui::TableNextColumn();
+                    ImGui::TextColored(Menu_col[2], " %s", "Gender ");
+                    ImGui::TableNextColumn();
+                    if(CharacterList::One->get_char_gender()==0)
+                    ImGui::TextColored(Menu_col[2], " %s", " Male");
+                    else
+                    ImGui::TextColored(Menu_col[2], " %s", " Female");
+
+                    ImGui::TableNextRow();
+                    ImGui::TableNextColumn();
+                    ImGui::TextColored(Menu_col[2], " %s", "Experience ");
+                    ImGui::TableNextColumn();
+                    static float xp_progress = (float(CharacterList::One->get_char_exp())) / float(CharacterList::One->get_char_explvl());
+                    xp_progress = (float(CharacterList::One->get_char_exp())) / float( CharacterList::One->get_char_explvl());
+                    
+                    float xp_progress_saturated = IM_CLAMP(xp_progress, 0.0f, 1.0f);
+                    char buf[32];
+                    sprintf(buf, "%d/%d", (int)(xp_progress_saturated * CharacterList::One->get_char_explvl()), CharacterList::One->get_char_explvl());
+                    ImGui::ProgressBar(xp_progress, ImVec2(CrPrBSize_x/1.65, CrPrBSize_y/12), buf);
+
+
+                    ImGui::TableNextRow();
+                    ImGui::TableNextColumn();
+                    ImGui::TextColored(Menu_col[2], " %s", "Wealth" );
+                    ImGui::TableNextColumn();
+                    if(CharacterList::One->get_wealth()>0)
+                    ImGui::TextColored(Menu_col[1], " %d", CharacterList::One->get_wealth());
+                    else 
+                    ImGui::TextColored(Menu_col[2], " %d", CharacterList::One->get_wealth());
+
+                    ImGui::TableNextRow();
+                    ImGui::TableNextColumn();
+                    
+                }
+                ImGui::EndTable();
+                ImGui::Separator();
+                if (ImGui::BeginTable("Stats ##profilestats", 2, flags))
+                {
+                    ImGui::TableSetupColumn(" Stats ##charstats", ImGuiTableColumnFlags_WidthFixed);
+                    ImGui::TableSetupColumn("##charstatsnum", ImGuiTableColumnFlags_WidthStretch);
+
+                    ImGui::TableHeadersRow();
+
+                    ImGui::TableNextRow();
+                    ImGui::TableNextColumn();
+                    ImGui::TextColored(Menu_col[2], " %s", "Agility ");
+                    ImGui::TableNextColumn();
+                    ImGui::TextColored(Menu_col[2], " %d", CharacterList::One->Get_stats().agility);
+                    ImGui::SameLine(0.0f, spacing);
+                    if (ImGui::Button("+##Agility", ImVec2(addStatButt, addStatButt)))
+                    {
+                        CharacterList::One->character_addstats_agility();
+                    }
+
+                    ImGui::TableNextRow();
+                    ImGui::TableNextColumn();
+                    ImGui::TextColored(Menu_col[2], " %s", "Strength ");
+                    ImGui::TableNextColumn();
+                    ImGui::TextColored(Menu_col[2], " %d", CharacterList::One->Get_stats().strength);
+                    ImGui::SameLine(0.0f, spacing);
+                    if (ImGui::Button("+##Strength", ImVec2(addStatButt, addStatButt)))
+                    {
+                        CharacterList::One->character_addstats_strength();
+                    }
+
+                    ImGui::TableNextRow();
+                    ImGui::TableNextColumn();
+                    ImGui::TextColored(Menu_col[2], " %s", "Intelligence ");
+                    ImGui::TableNextColumn();
+                    ImGui::TextColored(Menu_col[2], " %d", CharacterList::One->Get_stats().intelligence);
+                    ImGui::SameLine(0.0f, spacing);
+                    if (ImGui::Button("+##Intelligence", ImVec2(addStatButt, addStatButt)))
+                    {
+                        CharacterList::One->character_addstats_intelligence();
+                    }
+
+                    ImGui::TableNextRow();
+                    ImGui::TableNextColumn();
+                    ImGui::TextColored(Menu_col[2], " %s", "Stat points ");
+                    ImGui::TableNextColumn();
+                    if ((CharacterList::One->get_statpoints_left()) == 0)
+                        ImGui::TextColored(Menu_col[2], " %d", CharacterList::One->get_statpoints_left());
+                    else
+                        ImGui::TextColored(Menu_col[3], " %d*", CharacterList::One->get_statpoints_left());
+                        //ImGui::Text(" %d*", CharacterList::One->get_statpoints_left());
+
+                    
+                }
+                ImGui::EndTable();
+                ImGui::Separator();
+                
+                if (ImGui::Button("::Inventory::", ImVec2(CrPrBSize_x, CrPrBSize_y / 10)))
                 {
                     if (CharacterInventory == false)
                         CharacterInventory = true;
                     else if (CharacterInventory == true)
                         CharacterInventory = false;
-
-                };
-                
+                }
+                if (ImGui::IsItemHovered())
+                {
+                    ImGui::BeginTooltip();
+                    ImGui::Text("Player inventory");
+                    ImGui::EndTooltip();
+                }
                 
                 
                 ImGui::End();
@@ -375,7 +500,13 @@ int main(int, char**)
                     {
                         ImGui::SameLine();
                     }
-                    ImGui::Button(CharacterList::One->rInventory(i).first.get()->GetGameItemName().c_str(), ImVec2(invSlotSize, invSlotSize));
+                    ImGui::Button(CharacterList::One->rInventory(i)->GetGameItemName().c_str(), ImVec2(invSlotSize, invSlotSize));
+                    if (ImGui::IsItemHovered())
+                    {
+                        ImGui::BeginTooltip();
+                        CharacterList::One->rInventory(i)->drawIntoImgui();
+                        ImGui::EndTooltip();
+                    }
                 }
                 ImGui::End();
             }
@@ -459,7 +590,7 @@ void CreateRenderTarget()
     ID3D11Texture2D* pBackBuffer;
     g_pSwapChain->GetBuffer(0, IID_PPV_ARGS(&pBackBuffer));
     g_pd3dDevice->CreateRenderTargetView(pBackBuffer, NULL, &g_mainRenderTargetView);
-    pBackBuffer->Release();
+    pBackBuffer->Release();     
 }
 
 void CleanupRenderTarget()

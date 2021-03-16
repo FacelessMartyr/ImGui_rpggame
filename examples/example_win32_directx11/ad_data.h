@@ -7,7 +7,7 @@
 #include "Armour.h"
 #include "Flask.h"
 #include "Loot.h"
-class Character;
+#include "Character.h"
 namespace CharacterList
 {
     static Character* One;
