@@ -1,107 +1,106 @@
 ﻿  Character.cpp
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(33,44): warning C4099: 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>': type name first seen using 'class' now seen using 'struct'
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(15): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(43,44): warning C4099: 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>': type name first seen using 'class' now seen using 'struct'
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(18): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
 C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Character.h(110,44): warning C4099: 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>': type name first seen using 'class' now seen using 'struct'
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(15): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
-  Flask.cpp
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(18): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
   GameContent.cpp
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(33,44): warning C4099: 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>': type name first seen using 'class' now seen using 'struct'
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(15): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(43,44): warning C4099: 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>': type name first seen using 'class' now seen using 'struct'
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(18): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
 C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Character.h(110,44): warning C4099: 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>': type name first seen using 'class' now seen using 'struct'
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(15): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(18): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
   Inventory.cpp
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(33,44): warning C4099: 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>': type name first seen using 'class' now seen using 'struct'
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(15): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(43,44): warning C4099: 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>': type name first seen using 'class' now seen using 'struct'
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(18): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
 C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Character.h(110,44): warning C4099: 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>': type name first seen using 'class' now seen using 'struct'
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(15): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(18): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
 C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.cpp(52,27): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.cpp(67,52): warning C4100: 'invslot_id': unreferenced formal parameter
   dataload.cpp
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(33,44): warning C4099: 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>': type name first seen using 'class' now seen using 'struct'
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(15): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(43,44): warning C4099: 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>': type name first seen using 'class' now seen using 'struct'
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(18): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
 C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Character.h(110,44): warning C4099: 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>': type name first seen using 'class' now seen using 'struct'
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(15): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(18): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
   main.cpp
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(33,44): warning C4099: 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>': type name first seen using 'class' now seen using 'struct'
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(15): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(43,44): warning C4099: 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>': type name first seen using 'class' now seen using 'struct'
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(18): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
 C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Character.h(110,44): warning C4099: 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>': type name first seen using 'class' now seen using 'struct'
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(15): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(182,60): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(183,61): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(184,59): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(185,60): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(190,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(190,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(191,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(191,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(203,43): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.h(18): message : see declaration of 'std::unique_ptr<Game_Item,std::default_delete<Game_Item>>'
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(183,60): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(184,61): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(185,59): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(186,60): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(191,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(191,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(192,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(192,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(204,43): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(206,59): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(207,60): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(208,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(208,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(214,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(214,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(215,69): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(215,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(223,44): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(224,58): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(249,40): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(205,43): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(207,59): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(208,60): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(209,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(209,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(215,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(215,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(216,69): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(216,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(224,44): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(225,58): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(250,40): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(251,56): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(252,57): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(254,39): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(251,40): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(252,56): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(253,57): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(255,39): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(256,55): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(257,56): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(260,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(260,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(261,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(261,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(272,44): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(273,58): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(277,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(277,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(294,75): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(294,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(311,40): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(312,40): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(313,56): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(314,57): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(316,39): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(317,39): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(318,55): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(256,39): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(257,55): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(258,56): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(261,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(261,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(262,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(262,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(273,44): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(274,58): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(278,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(278,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(300,75): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(300,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(317,40): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(318,40): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
 C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(319,56): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(321,42): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(322,51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(324,44): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(325,58): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(329,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(329,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(330,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(330,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(381,89): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(381,71): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(454,84): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(454,59): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(479,41): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(480,41): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(481,57): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(482,58): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(484,42): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(485,52): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(487,40): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(488,40): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(489,56): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(490,57): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(492,63): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(492,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(493,61): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(493,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(155,26): warning C4390: ';': empty controlled statement found; is this the intent?
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(380,21): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(98,10): warning C4189: 'show_demo_window': local variable is initialized but not referenced
-C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(99,10): warning C4189: 'show_another_window': local variable is initialized but not referenced
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(320,57): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(322,39): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(323,39): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(324,55): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(325,56): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(327,42): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(328,51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(330,44): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(331,58): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(335,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(335,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(336,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(336,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(387,89): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(387,71): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(460,84): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(460,59): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(485,41): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(486,41): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(487,57): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(488,58): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(490,42): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(491,52): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(493,40): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(494,40): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(495,56): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(496,57): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(498,63): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(498,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(499,61): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(499,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(156,26): warning C4390: ';': empty controlled statement found; is this the intent?
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(386,21): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(99,10): warning C4189: 'show_demo_window': local variable is initialized but not referenced
+C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\main.cpp(100,10): warning C4189: 'show_another_window': local variable is initialized but not referenced
   Generating Code...
 C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Inventory.cpp(65): warning C4715: 'Game_Inventory::addtoInventory': not all control paths return a value
   example_win32_directx11.vcxproj -> C:\Users\Nekobu\source\repos\IMGUI _ RPG GAME\examples\example_win32_directx11\Debug\example_win32_directx11.exe
