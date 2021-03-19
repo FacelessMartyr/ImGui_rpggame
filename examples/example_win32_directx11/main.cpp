@@ -14,6 +14,7 @@
 #include "ad_data.h"
 #include "nlohmann/json.hpp"
 #include "r_libs.h"
+#include "Mediator.h"
 
 
 
@@ -276,14 +277,19 @@ int main(int, char**)
                 ImGui::Text(nickname);
                 if(ImGui::Button("Create", ImVec2(CrChBSize_x, CrChBSize_y / 10)))
                 {
-                    CharacterList::One = new Character(nickname, gender);
+                    
+                    CharacterList::One = make_shared<Character>(nickname, gender);
+
+                    //Concrete_Mediator * transfer = new Concrete_Mediator(CharacterList::One);
+                    //CharacterList::One->set_mediator(transfer);
+
                     showCharCr = false;
                     CharProfile = true;
                     //test
                     CharacterList::One->Char_AddItem(4);
                     CharacterList::One->Char_AddItem(3);
                     CharacterList::One->Char_AddItem(5);
-                    CharacterList::One->Char_ShowSlots();
+                    
 
                     
 
@@ -504,7 +510,9 @@ int main(int, char**)
                     if (ImGui::IsItemHovered())
                     {
                         ImGui::BeginTooltip();
-                        CharacterList::One->rInventory(i)->drawIntoImgui();
+                        CharacterList::One->output_InvItem_Stats(i);
+                        CharacterList::One->output_InvItem_RequiredLvl(i);
+                        CharacterList::One->outputI_InvItem_Cost(i);
                         ImGui::EndTooltip();
                     }
                 }

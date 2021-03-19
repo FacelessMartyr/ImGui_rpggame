@@ -3,6 +3,7 @@
 #define CHARACTER_H
 #include <iostream>
 #include "Inventory.h"
+
 class Character
 {
 private:
@@ -11,7 +12,6 @@ private:
 		int strength;
 		int agility;
 		int intelligence;
-
 	};
 	struct CharXP
 	{
@@ -23,6 +23,7 @@ private:
 		long Exp_to_lvlup = 400;
 		int base_reward = 100;
 	};
+
 
 	enum CharacterRole { soon };
     enum CharacterGender{male=0,female=1};
@@ -37,12 +38,14 @@ private:
     std::string nickname;
     bool gender;
     int statpoints_left;
-
     int wealth;
+
+    //Concrete_Mediator * mediator_;
+
 public:
 	Character(std::string n_nickname = "Steve", bool n_gender = 0):c_id(121)
 	{
-
+        //mediator_ = nullptr;
 		cXP.Exp_to_lvlup = 400;
 		cXP.ExpLVL = 400;
 		cXP.Exp = 0;
@@ -59,9 +62,9 @@ public:
 	};
 	~Character() {};//saves everything
 
+    //void set_mediator(Concrete_Mediator* n_mediator) { mediator_ = n_mediator; }
 
-	int character_gainxp();//character add exp
-
+	int character_gainxp();//character add exp (test)
 
     //Adding character stats
     void character_addstats_agility() {
@@ -91,7 +94,7 @@ public:
 
     //Getters
     std::string get_nickname() {return nickname;}  //returns nickname
-             //returns gender
+
     const CharStats& Get_stats()const { return cStats; }; //returns struct obj stats
     const int InvSize() const{return ch_inv.GetInvSize(); }   //returns current inventory size
     const int get_wealth() const { return wealth; };
@@ -103,11 +106,11 @@ public:
     void Char_AddItem(const int it_id) {
         ch_inv.addtoInventory(it_id);
     }
-    void Char_ShowSlots()
-    {
-        ch_inv.InvSlots();
-    }
+
     const struct std::unique_ptr<Game_Item>& rInventory(const int s_i) const { return ch_inv.rInventory(s_i); }
+    const void output_InvItem_Stats(const int s_i) const { return ch_inv.rInventory(s_i).get()->drawIntoImgui(); }
+    const void output_InvItem_RequiredLvl(const int s_i) const;
+    const void outputI_InvItem_Cost(const int s_i) const;
     
     void show_stats()
     {

@@ -90,29 +90,4 @@ void Game_Weapon::drawIntoImgui() const
         ImGui::SameLine();
         ImGui::Text(" %d", GetGameWeaponStats().magical_attack_dmg);
     }
-
-    ImGui::Separator();
-
-    ImGui::TextColored(ItemStatsColor, "%s ", "Requires ");
-    ImGui::SameLine();
-    ImGui::Text("%d ", GetGameItemStats().item_lvl);
-    ImGui::SameLine();
-    ImGui::TextColored(ItemStatsColor, "%s", "level");
-
-   /* else
-    {
-
-        ImGui::TextColored(ItemLevelReq, "%s ", "Requires ");
-        ImGui::SameLine();
-        ImGui::Text("%d ", GetGameItemStats().item_lvl);
-        ImGui::SameLine();
-        ImGui::TextColored(ItemLevelReq, "%s", "level");
-    }*/
-
-    ImGui::Separator();
-    ImGui::Text("%d ", GetGameItemStats().cost);
-    ImGui::SameLine();
-    ImGui::TextColored(ItemStatsColor, "%s", "yen");
-
-    
 }

@@ -10,7 +10,7 @@
 #include "Character.h"
 namespace CharacterList
 {
-    static Character* One;
+    static std::shared_ptr<Character> One;
 };
 namespace InventoryList
 {

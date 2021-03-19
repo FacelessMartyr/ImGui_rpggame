@@ -15,41 +15,34 @@ int Character::character_gainxp()
 	}
     return 0;
 }
-//adding character stats
+const void Character::output_InvItem_RequiredLvl(const int s_i) const
+{
+    ImGui::Separator();
+    if (ch_inv.rInventory(s_i).get()->GetGameItemStats().item_lvl < get_char_lvl())
+    {
+        ImGui::TextColored(ItemStatsColor, "%s ", "Requires ");
+        ImGui::SameLine();
+        ImGui::Text("%d ", (ch_inv.rInventory(s_i).get()->GetGameItemStats().item_lvl));
+        ImGui::SameLine();
+        ImGui::TextColored(ItemStatsColor, "%s", "level");
+    }
+    else
+    {
+        ImGui::TextColored(ItemLevelReq, "%s ", "Requires ");
+        ImGui::SameLine();
+        ImGui::TextColored(ItemLevelReq, "%d ", (ch_inv.rInventory(s_i).get()->GetGameItemStats().item_lvl));
+        ImGui::SameLine();
+        ImGui::TextColored(ItemLevelReq, "%s", "level");
+    }
+    ImGui::Separator();
+}
 
-        /*for (int i = 0; i < statpoints_left; )
-		{
-			if (std::cin >> st_choice)
-			{
-				switch (st_choice)
-				{
-				case 1:
-					cStats.strength++;
-					statpoints_left--;
-					std::cout << statpoints_left << std::endl;
-					show_stats();
-					continue;
-				case 2:
-					cStats.agility++;
-					statpoints_left--;
-					std::cout << statpoints_left << std::endl;
-					show_stats();
-					continue;
-				case 3:
-					cStats.intelligence++;
-					statpoints_left--;
-					std::cout << statpoints_left << std::endl;
-					show_stats();
-					continue;
-				default:
-					break;
-				}
-				st_choice = 0;
-			}
-			else
-				break;
-		}
-		std::cout << statpoints_left << std::endl;*/
+const void Character::outputI_InvItem_Cost(const int s_i) const
+{
+    ImGui::Text("%d ", ch_inv.rInventory(s_i).get()->GetGameItemStats().cost);
+    ImGui::SameLine();
+    ImGui::TextColored(ItemStatsColor, "%s", "yen");
+}
 
 
 

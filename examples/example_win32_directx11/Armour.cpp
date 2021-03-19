@@ -107,18 +107,4 @@ void Game_Armour::drawIntoImgui() const
         ImGui::SameLine();
         ImGui::Text(" %d", GetGameArmourStats().evasion);
     }
-
-    ImGui::Separator();
-
-    ImGui::TextColored(ItemStatsColor, "%s ", "Requires ");
-    ImGui::SameLine();
-    ImGui::Text("%d ", GetGameItemStats().item_lvl);
-    ImGui::SameLine();
-    ImGui::TextColored(ItemStatsColor, "%s", "level");
-
-
-
-    ImGui::Separator();
-    ImGui::Text("%d ", GetGameItemStats().cost);
-    ImGui::TextColored(ItemStatsColor, "%s", "yen");
 }

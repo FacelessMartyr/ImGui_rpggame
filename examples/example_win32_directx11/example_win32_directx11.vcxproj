@@ -160,6 +160,7 @@
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Loot.h" />
+    <ClInclude Include="Mediator.h" />
     <ClInclude Include="r_libs.h" />
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
