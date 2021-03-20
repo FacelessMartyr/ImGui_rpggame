@@ -45,6 +45,7 @@ private:
 public:
 	Character(std::string n_nickname = "Steve", bool n_gender = 0):c_id(121)
 	{
+
         //mediator_ = nullptr;
 		cXP.Exp_to_lvlup = 400;
 		cXP.ExpLVL = 400;
