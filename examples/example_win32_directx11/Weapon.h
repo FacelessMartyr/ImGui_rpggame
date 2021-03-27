@@ -34,7 +34,7 @@ public:
     //Constructor
 	Game_Weapon(int n_item_id, int n_cost, int n_rarity, int n_item_type, int n_item_lvl, std::string n_item_name,
 		int n_bphys_attack_dmg, int n_magical_attack_dmg, int n_weapon_type, int n_item_condition)
-		:Game_Item(n_item_id, n_cost, n_rarity, n_item_type, n_item_lvl, n_item_name, n_item_condition)
+		: Game_Item(n_item_id, n_cost, n_rarity, n_item_type, n_item_lvl, n_item_name, n_item_condition)
 	{
 		specs.physical_attack_dmg = n_bphys_attack_dmg;
 		specs.magical_attack_dmg = n_magical_attack_dmg;

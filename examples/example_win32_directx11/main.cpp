@@ -289,6 +289,11 @@ int main(int, char**)
                     CharacterList::One->Char_AddItem(4);
                     CharacterList::One->Char_AddItem(3);
                     CharacterList::One->Char_AddItem(5);
+                    for (int i = 0; i < 10; i++)
+                    {
+                        CharacterList::One->character_gainxp();
+                    }
+                    
                     
 
                     
@@ -510,9 +515,7 @@ int main(int, char**)
                     if (ImGui::IsItemHovered())
                     {
                         ImGui::BeginTooltip();
-                        CharacterList::One->output_InvItem_Stats(i);
-                        CharacterList::One->output_InvItem_RequiredLvl(i);
-                        CharacterList::One->outputI_InvItem_Cost(i);
+                        CharacterList::One->outputItemInfo_ImGui(i);
                         ImGui::EndTooltip();
                     }
                 }

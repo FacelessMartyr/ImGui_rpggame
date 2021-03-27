@@ -9,7 +9,7 @@ void GameContent::loadData_Weapons()
     std::set<std::filesystem::path> weapon_sorted_by_name;
 
     //---inserting file names into set
-    for (auto& entry : std::filesystem::directory_iterator(pathlist[1]))
+    for (auto& entry : std::filesystem::directory_iterator(items_pathlist[1]))
         weapon_sorted_by_name.insert(entry.path());
 
     std::ifstream file_input;
@@ -46,7 +46,7 @@ void GameContent::loadData_Food()
         std::set<std::filesystem::path> food_sorted_by_name;
 
         //---inserting file names into set
-        for (auto& entry : std::filesystem::directory_iterator(pathlist[3]))
+        for (auto& entry : std::filesystem::directory_iterator(items_pathlist[3]))
             food_sorted_by_name.insert(entry.path());
 
         std::ifstream file_input;
@@ -80,7 +80,7 @@ void GameContent::loadData_Flasks()
     std::set<std::filesystem::path> flasks_sorted_by_name;
 
     //---inserting file names into set
-    for (auto& entry : std::filesystem::directory_iterator(pathlist[4]))
+    for (auto& entry : std::filesystem::directory_iterator(items_pathlist[4]))
         flasks_sorted_by_name.insert(entry.path());
 
     std::ifstream file_input;
@@ -115,7 +115,7 @@ void GameContent::loadData_Armoury()
     std::set<std::filesystem::path> armour_sorted_by_name;
 
     //---inserting file names into set
-    for (auto& entry : std::filesystem::directory_iterator(pathlist[2]))
+    for (auto& entry : std::filesystem::directory_iterator(items_pathlist[2]))
         armour_sorted_by_name.insert(entry.path());
 
     std::ifstream file_input;
@@ -149,7 +149,7 @@ void GameContent::loadData_Loot()
     std::set<std::filesystem::path> loot_sorted_by_name;
 
     //---inserting file names into set
-    for (auto& entry : std::filesystem::directory_iterator(pathlist[0]))
+    for (auto& entry : std::filesystem::directory_iterator(items_pathlist[0]))
         loot_sorted_by_name.insert(entry.path());
 
     std::ifstream file_input;

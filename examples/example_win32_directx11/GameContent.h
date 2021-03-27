@@ -7,9 +7,9 @@
 class GameContent
 {
 private:
-	const enum { pathlistSIZE = 5 };
-	const std::string pathlist[pathlistSIZE] = {"items/loot/","items/weapons/","items/armour/","items/food/","items/flask/"};
-	
+	const enum { items_pathlistSIZE = 5,npc_pathlistSIZE = 6 };
+	const std::string items_pathlist[items_pathlistSIZE] = {"items/loot/","items/weapons/","items/armour/","items/food/","items/flask/"};
+    const std::string npc_pathlist[npc_pathlistSIZE] = { "npc/alchemist","npc/charmer","npc/farmer","npc/guardian","npc/merchant","npc/weaponsmith" };
 	//Game_Weapon* weapon_data;
     
     friend class Game_Inventory;
@@ -26,6 +26,8 @@ public:
 	void loadData_Food();//completed;
 	void loadData_Flasks();//completed;
 	void loadData_Loot();//completed;
+
+    void loadData_Npc();
 
     int contentWeapons_size() const { return ad_content::weapons_data.size(); }
     int contentFood_size() const { return ad_content::food_data.size(); }

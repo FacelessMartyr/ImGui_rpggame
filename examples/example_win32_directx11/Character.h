@@ -109,9 +109,18 @@ public:
     }
 
     const struct std::unique_ptr<Game_Item>& rInventory(const int s_i) const { return ch_inv.rInventory(s_i); }
+
     const void output_InvItem_Stats(const int s_i) const { return ch_inv.rInventory(s_i).get()->drawIntoImgui(); }
     const void output_InvItem_RequiredLvl(const int s_i) const;
     const void outputI_InvItem_Cost(const int s_i) const;
+
+    const void outputItemInfo_ImGui(const int s_i) const
+    {
+        output_InvItem_Stats(s_i);
+        output_InvItem_RequiredLvl(s_i);
+        outputI_InvItem_Cost(s_i);
+    }
+    
     
     void show_stats()
     {

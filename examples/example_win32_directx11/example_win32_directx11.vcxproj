@@ -161,6 +161,7 @@
     <ClInclude Include="Item.h" />
     <ClInclude Include="Loot.h" />
     <ClInclude Include="Mediator.h" />
+    <ClInclude Include="Npc.h" />
     <ClInclude Include="r_libs.h" />
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
@@ -181,6 +182,7 @@
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Npc.cpp" />
     <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
