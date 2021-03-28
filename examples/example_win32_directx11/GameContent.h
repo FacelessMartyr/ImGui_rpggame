@@ -21,20 +21,26 @@ public:
 	
 	};
 
+    //Loading items
 	void loadData_Weapons();//completed;
 	void loadData_Armoury();//completed;
 	void loadData_Food();//completed;
 	void loadData_Flasks();//completed;
 	void loadData_Loot();//completed;
 
-    void loadData_Npc();
+    //
+    const int contentWeapons_size() const { return ad_content::weapons_data.size(); }
+    const int contentFood_size() const { return ad_content::food_data.size(); }
+    const int contentArmour_size() const { return ad_content::armour_data.size(); }
+    const int contentFlask_size() const { return ad_content::flask_data.size(); }
+    const int contentLoot_size() const { return ad_content::loot_data.size(); }
 
-    int contentWeapons_size() const { return ad_content::weapons_data.size(); }
-    int contentFood_size() const { return ad_content::food_data.size(); }
-    int contentArmour_size() const { return ad_content::armour_data.size(); }
-    int contentFlask_size() const { return ad_content::flask_data.size(); }
-    int contentLoot_size() const { return ad_content::loot_data.size(); }
-	
+    //Loading npc's
+    void loadData_AlchemistNPC();
+    void loadData_MerchantNPC();
+    void loadData_GuardianNPC();
+    void loadData_CharmerNPC();
+    void loadData_WeaponsmithNPC();
 	~GameContent()
 	{
 		

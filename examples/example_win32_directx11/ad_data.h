@@ -25,7 +25,11 @@ namespace ad_content
     inline std::vector<Game_Armour> armour_data;//600 - 899
     inline std::vector<Game_Flask> flask_data;//900 - 1190
     inline std::vector<Game_Loot> loot_data;//1190 - 1499
-    inline std::vector<std::unique_ptr<GameNPC>> npc_data;
+    inline std::vector<GameNPC_Alchemist> alchemist_npc_data;
+    inline std::vector<GameNPC_Merchant> merchant_npc_data;
+    inline std::vector<GameNPC_Guardian> guardian_npc_data;
+    inline std::vector<GameNPC_Charmer> charmer_npc_data;
+    inline std::vector<GameNPC_WeaponSmith> weaponsmith_npc_data;
 }
 
 #endif

@@ -177,6 +177,181 @@ void GameContent::loadData_Loot()
     }
 }
 
+void GameContent::loadData_AlchemistNPC()
+{
+    //---filenames container
+    std::set<std::filesystem::path> npc_alchemist_sorted_by_name;
+
+    //---inserting file names into set
+    for (auto& entry : std::filesystem::directory_iterator(npc_pathlist[npc_pathlistSIZE]))
+        npc_alchemist_sorted_by_name.insert(entry.path());
+
+    std::ifstream file_input;
+    std::string serialised_data;//raw_data
+    std::string temp;//temp data from loop
+
+    char* ptr = NULL;
+    for (auto& filename : npc_alchemist_sorted_by_name)
+    {
+        file_input.open(filename, std::ifstream::app, std::ifstream::binary);
+
+        while (!file_input.eof())
+        {
+            ptr = new char[36];
+            file_input.getline(ptr, 35, '\n');
+            serialised_data += ptr;
+            delete[]ptr;
+        }
+
+        std::cout << serialised_data << "\n\n";
+        file_input.close();
+        json parsed_file = json::parse(serialised_data);
+        serialised_data = "";
+
+        ad_content::alchemist_npc_data.push_back(GameNPC_Alchemist());
+    }
+}
+
+void GameContent::loadData_MerchantNPC()
+{
+    //---filenames container
+    std::set<std::filesystem::path> npc_merchant_sorted_by_name;
+
+    //---inserting file names into set
+    for (auto& entry : std::filesystem::directory_iterator(npc_pathlist[npc_pathlistSIZE]))
+        npc_merchant_sorted_by_name.insert(entry.path());
+
+    std::ifstream file_input;
+    std::string serialised_data;//raw_data
+    std::string temp;//temp data from loop
+
+    char* ptr = NULL;
+    for (auto& filename : npc_merchant_sorted_by_name)
+    {
+        file_input.open(filename, std::ifstream::app, std::ifstream::binary);
+
+        while (!file_input.eof())
+        {
+            ptr = new char[36];
+            file_input.getline(ptr, 35, '\n');
+            serialised_data += ptr;
+            delete[]ptr;
+        }
+
+        std::cout << serialised_data << "\n\n";
+        file_input.close();
+        json parsed_file = json::parse(serialised_data);
+        serialised_data = "";
+
+        ad_content::merchant_npc_data.push_back(GameNPC_Merchant());
+    }
+}
+
+void GameContent::loadData_GuardianNPC()
+{
+    //---filenames container
+    std::set<std::filesystem::path> npc_guardian_sorted_by_name;
+
+    //---inserting file names into set
+    for (auto& entry : std::filesystem::directory_iterator(npc_pathlist[npc_pathlistSIZE]))
+        npc_guardian_sorted_by_name.insert(entry.path());
+
+    std::ifstream file_input;
+    std::string serialised_data;//raw_data
+    std::string temp;//temp data from loop
+
+    char* ptr = NULL;
+    for (auto& filename : npc_guardian_sorted_by_name)
+    {
+        file_input.open(filename, std::ifstream::app, std::ifstream::binary);
+
+        while (!file_input.eof())
+        {
+            ptr = new char[36];
+            file_input.getline(ptr, 35, '\n');
+            serialised_data += ptr;
+            delete[]ptr;
+        }
+
+        std::cout << serialised_data << "\n\n";
+        file_input.close();
+        json parsed_file = json::parse(serialised_data);
+        serialised_data = "";
+
+        ad_content::guardian_npc_data.push_back(GameNPC_Guardian());
+    }
+}
+
+void GameContent::loadData_CharmerNPC()
+{
+    //---filenames container
+    std::set<std::filesystem::path> npc_charmer_sorted_by_name;
+
+    //---inserting file names into set
+    for (auto& entry : std::filesystem::directory_iterator(npc_pathlist[npc_pathlistSIZE]))
+        npc_charmer_sorted_by_name.insert(entry.path());
+
+    std::ifstream file_input;
+    std::string serialised_data;//raw_data
+    std::string temp;//temp data from loop
+
+    char* ptr = NULL;
+    for (auto& filename : npc_charmer_sorted_by_name)
+    {
+        file_input.open(filename, std::ifstream::app, std::ifstream::binary);
+
+        while (!file_input.eof())
+        {
+            ptr = new char[36];
+            file_input.getline(ptr, 35, '\n');
+            serialised_data += ptr;
+            delete[]ptr;
+        }
+
+        std::cout << serialised_data << "\n\n";
+        file_input.close();
+        json parsed_file = json::parse(serialised_data);
+        serialised_data = "";
+
+        ad_content::charmer_npc_data.push_back(GameNPC_Charmer());
+    }
+}
+
+void GameContent::loadData_WeaponsmithNPC()
+{
+    //---filenames container
+    std::set<std::filesystem::path> npc_weaponsmith_sorted_by_name;
+
+    //---inserting file names into set
+    for (auto& entry : std::filesystem::directory_iterator(npc_pathlist[npc_pathlistSIZE]))
+        npc_weaponsmith_sorted_by_name.insert(entry.path());
+
+    std::ifstream file_input;
+    std::string serialised_data;//raw_data
+    std::string temp;//temp data from loop
+
+    char* ptr = NULL;
+    for (auto& filename : npc_weaponsmith_sorted_by_name)
+    {
+        file_input.open(filename, std::ifstream::app, std::ifstream::binary);
+
+        while (!file_input.eof())
+        {
+            ptr = new char[36];
+            file_input.getline(ptr, 35, '\n');
+            serialised_data += ptr;
+            delete[]ptr;
+        }
+
+        std::cout << serialised_data << "\n\n";
+        file_input.close();
+        json parsed_file = json::parse(serialised_data);
+        serialised_data = "";
+
+        ad_content::weaponsmith_npc_data.push_back(GameNPC_WeaponSmith());
+    }
+}
+
 
 /* static const int WeaponDataSIZE = 9;
 	//---counting files

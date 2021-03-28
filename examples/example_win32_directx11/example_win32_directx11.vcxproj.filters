@@ -72,6 +72,9 @@
     <ClInclude Include="Npc.h">
       <Filter>sources\GameFiles\headers</Filter>
     </ClInclude>
+    <ClInclude Include="GameTown.h">
+      <Filter>sources\GameFiles\headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\imgui.cpp">
