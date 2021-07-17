@@ -15,6 +15,7 @@ static const std::vector<ImColor> ItemRarityColor
     ImColor(123,230,14,255)
 };
 static const ImColor ItemStatsColor(200,200,200,255);
+static const ImColor ItemDescColor(50, 50, 50, 255);
 static const ImColor ItemLevelReq(105,0,0,255);
 
 class Game_Item
@@ -39,14 +40,16 @@ private:
 	std::string item_name;
 	int item_id;
 	int item_condition;
-	//std::string decription;
+	std::string description;
+
+    std::string item_unique_id;
 
     
 	
 public:
 
     //Constructor
-	Game_Item(int n_item_id, int n_cost, int n_rarity, int n_item_type, int n_item_lvl, std::string n_item_name, int n_item_condition);
+	Game_Item(int n_item_id, int n_cost, int n_rarity, int n_item_type, int n_item_lvl, std::string n_item_name, int n_item_condition, std::string n_description);
     //Default constructor
     Game_Item();
     //Destructor
@@ -69,9 +72,15 @@ public:
     const ItemRarity GetGameItemRarityEnum() const { return item_rarity_enum; };
     const std::string GetGameItemTypeStr(ItemType Type) const;
     const ItemType GetGameItemTypeEnum() const { return item_type_enum; };
+
+    const std::string GetGameItemDesc() const { return description; };
+    const std::string GetGameItemUniqueID() const { return item_unique_id; }
+    //Setters
+    void SetItemUniqueID(std::string n_item_unique_id) { item_unique_id = n_item_unique_id; };
     
     //Output to ImGui
     virtual void drawIntoImgui()const = 0;
+    virtual std::string GetGameItemTypeTypeStr()const = 0;
 
 
    

@@ -32,7 +32,7 @@ public:
 	}
 
     //Constructor
-	Game_Armour(int n_item_id, int n_cost, int n_rarity, int n_item_type, int n_item_lvl, std::string n_item_name,int n_armour_type, int n_armour, int n_evasion,int n_item_condition);
+	Game_Armour(int n_item_id, int n_cost, int n_rarity, int n_item_type, int n_item_lvl, std::string n_item_name,int n_armour_type, int n_armour, int n_evasion,int n_item_condition, std::string n_description);
 
     //Copying constructor
     Game_Armour(const Game_Armour& a);
@@ -50,7 +50,7 @@ public:
 
     inline const std::string GetGameArmourTypeStr(ArmourType Type) const;
     inline const std::string GetGameArmourConditionStr(ArmourCondition Type) const;
-
+    std::string GetGameItemTypeTypeStr()const {return GetGameArmourTypeStr(armour_type_enum); }
     //Output to ImGui
     void drawIntoImgui() const;
 };

@@ -203,17 +203,17 @@ int main(int, char**)
             {
                 static int PlayButtSize_x = double(windowsize.right)/3.2;
                 static int PlayButtSize_y = double(windowsize.bottom)/9;
-                ImGui::Begin("RPG Game v0.1", &showWindow, window_flags);
+                ImGui::Begin("RPG Game v0.1.1", &showWindow, window_flags);
                 PlayButtSize_x = double(windowsize.right) / 3.2;
                 PlayButtSize_y = double(windowsize.bottom) / 9;
-                if (ImGui::Button("PLAY", ImVec2(PlayButtSize_x, PlayButtSize_y))) {
+                if (ImGui::Button("PLAY ME", ImVec2(PlayButtSize_x, PlayButtSize_y))) {
                     showWindow = false; showCharCr = true;
                     load_gamecontent();
                 }
 
 
                 if (ImGui::Button("EXIT", ImVec2(PlayButtSize_x, PlayButtSize_y))) { showWindow = false; EXIT_FAILURE; }
-                if (ImGui::Button("REFRESH", ImVec2(PlayButtSize_x, PlayButtSize_y)))
+                if (ImGui::Button("Version 0.1.1", ImVec2(PlayButtSize_x, PlayButtSize_y)))
                 {
                     w_height = windowsize.bottom;
                     w_width = windowsize.right;
@@ -288,11 +288,12 @@ int main(int, char**)
                     //test
                     CharacterList::One->Char_AddItem(4);
                     CharacterList::One->Char_AddItem(3);
-                    CharacterList::One->Char_AddItem(5);
-                    for (int i = 0; i < 10; i++)
-                    {
-                        CharacterList::One->character_gainxp();
-                    }
+                    CharacterList::One->Char_AddItem(3);
+                    CharacterList::One->Char_AddItem(601);
+                    
+                    
+                    
+
                     
                     
 
@@ -318,22 +319,27 @@ int main(int, char**)
                 //
             if (CharProfile)
             {
-                static float col[4];
-                static int CrPrBSize_x = double(windowsize.right) / 2.7;
-                static int CrPrBSize_y = double(windowsize.bottom) / 1.35;
-                CrPrBSize_x = double(windowsize.right) / 2.7;
-                CrPrBSize_y = double(windowsize.bottom) / 1.35;
+                //static float col[4];
 
-                static int CrPrBPos_x = double(windowsize.right) / 4;
-                static int CrPrBPos_y = double(windowsize.bottom) / 5;
-                CrPrBPos_x = double(windowsize.right) / 4;
-                CrPrBPos_y = double(windowsize.bottom) / 5;
+                static double CharacterProfSizeX = 3.95;
+                static double CharacterProfSizeY = 1.4;
+                static int CrPrBSize_x = double(windowsize.right) / CharacterProfSizeX;
+                static int CrPrBSize_y = double(windowsize.bottom) / CharacterProfSizeY;
+                CrPrBSize_x = double(windowsize.right) / CharacterProfSizeX;
+                CrPrBSize_y = double(windowsize.bottom) / CharacterProfSizeY;
+
+                static double CharacterProfPosX = 2.32;
+                static double CharacterProfPosY = 5;
+                static int CrPrBPos_x = double(windowsize.right) / CharacterProfPosX;
+                static int CrPrBPos_y = double(windowsize.bottom) / CharacterProfPosY;
+                CrPrBPos_x = double(windowsize.right) / CharacterProfPosX;
+                CrPrBPos_y = double(windowsize.bottom) / CharacterProfPosY;
 
                 static float addStatButt = double(CrPrBSize_x) / 11.85;
                 addStatButt = double(CrPrBSize_x) / 11.85;
 
-                static float cp_fontscacle = float(windowsize.bottom) / 840.0;
-                cp_fontscacle = float(windowsize.bottom) / 840.0;
+                static float cp_fontscacle = float(windowsize.bottom) / 990.0;
+                cp_fontscacle = float(windowsize.bottom) / 990.0;
 
                 float spacing = ImGui::GetStyle().ItemInnerSpacing.x;
 
@@ -351,7 +357,7 @@ int main(int, char**)
 
                 if (ImGui::BeginTable("##profiledesc", 2, flags))
                 {
-                    
+
                     ImGui::TableSetupColumn(" Nickaname ##char", ImGuiTableColumnFlags_WidthFixed);
                     ImGui::TableSetupColumn(CharacterList::One->get_nickname().c_str(), ImGuiTableColumnFlags_WidthStretch);
                     ImGui::TableHeadersRow();
@@ -374,23 +380,33 @@ int main(int, char**)
                     ImGui::TableNextColumn();
                     ImGui::TextColored(Menu_col[2], " %s", "Gender ");
                     ImGui::TableNextColumn();
-                    if(CharacterList::One->get_char_gender()==0)
-                    ImGui::TextColored(Menu_col[2], " %s", " Male");
+                    if (CharacterList::One->get_char_gender() == 0)
+                        ImGui::TextColored(Menu_col[2], " %s", " Male");
                     else
-                    ImGui::TextColored(Menu_col[2], " %s", " Female");
+                        ImGui::TextColored(Menu_col[2], " %s", " Female");
 
                     ImGui::TableNextRow();
                     ImGui::TableNextColumn();
                     ImGui::TextColored(Menu_col[2], " %s", "Experience ");
                     ImGui::TableNextColumn();
-                    static float xp_progress = (float(CharacterList::One->get_char_exp())) / float(CharacterList::One->get_char_explvl());
-                    xp_progress = (float(CharacterList::One->get_char_exp())) / float( CharacterList::One->get_char_explvl());
+
                     
+                    static float xp_progress = (float(CharacterList::One->get_char_exp())) / float(CharacterList::One->get_char_explvl());
+                    xp_progress = (float(CharacterList::One->get_char_exp())) / float(CharacterList::One->get_char_explvl());
+
                     float xp_progress_saturated = IM_CLAMP(xp_progress, 0.0f, 1.0f);
                     char buf[32];
                     sprintf(buf, "%d/%d", (int)(xp_progress_saturated * CharacterList::One->get_char_explvl()), CharacterList::One->get_char_explvl());
-                    ImGui::ProgressBar(xp_progress, ImVec2(CrPrBSize_x/1.65, CrPrBSize_y/12), buf);
+                    ImGui::ProgressBar(xp_progress, ImVec2(CrPrBSize_x / 1.65, CrPrBSize_y / 12), buf);
+                    if (ImGui::IsItemHovered())
+                    {
+                        ImGui::BeginTooltip();
+                        ImGui::TextColored(Menu_col[2], " %d/", CharacterList::One->get_char_exp());
+                        ImGui::SameLine();
+                        ImGui::TextColored(Menu_col[2], " %d", CharacterList::One->get_char_explvl());
+                        ImGui::EndTooltip();
 
+                    }
 
                     ImGui::TableNextRow();
                     ImGui::TableNextColumn();
@@ -450,6 +466,22 @@ int main(int, char**)
                     ImGui::TableNextRow();
                     ImGui::TableNextColumn();
                     ImGui::TextColored(Menu_col[2], " %s", "Stat points ");
+                    //Explanation about statpoints while hovered
+                    if (ImGui::IsItemHovered())
+                    {
+                        if (CharacterList::One->get_char_lvl() > 10)
+                        {
+                            ImGui::BeginTooltip();
+                            ImGui::TextColored(Menu_col[2], " %s", "You gain 2 stat point per level");
+                            ImGui::EndTooltip();
+                        }
+                        else
+                        {
+                            ImGui::BeginTooltip();
+                            ImGui::TextColored(Menu_col[2], " %s", "You gain 1 stat point per level");
+                            ImGui::EndTooltip();
+                        }
+                    }
                     ImGui::TableNextColumn();
                     if ((CharacterList::One->get_statpoints_left()) == 0)
                         ImGui::TextColored(Menu_col[2], " %d", CharacterList::One->get_statpoints_left());
@@ -461,8 +493,12 @@ int main(int, char**)
                 }
                 ImGui::EndTable();
                 ImGui::Separator();
-                
-                if (ImGui::Button("::Inventory::", ImVec2(CrPrBSize_x, CrPrBSize_y / 10)))
+                if (ImGui::Button("::AddXp::", ImVec2(CrPrBSize_x/2, CrPrBSize_y / 10)))
+                CharacterList::One->character_gainxp();
+
+                ImGui::SameLine();
+
+                if (ImGui::Button("::Inventory::", ImVec2(CrPrBSize_x/2, CrPrBSize_y / 10)))
                 {
                     if (CharacterInventory == false)
                         CharacterInventory = true;
@@ -487,31 +523,64 @@ int main(int, char**)
                 //:::: CHARACTER INVENTORY
             if (CharacterInventory)
             {
-                static int CrInvBSize_x = double(windowsize.right) / 2.7;
-                static int CrInvBSize_y = double(windowsize.bottom) / 1.35;
-                CrInvBSize_x = double(windowsize.right) / 2.7;
-                CrInvBSize_y = double(windowsize.bottom) / 1.35;
+                static double CharacterInvSizeX = 3.4;
+                static double CharacterInvSizeY = 1.35;
+                static int CrInvBSize_x = double(windowsize.right) / CharacterInvSizeX;
+                static int CrInvBSize_y = double(windowsize.bottom) / CharacterInvSizeY;
+                CrInvBSize_x = double(windowsize.right) / CharacterInvSizeX;
+                CrInvBSize_y = double(windowsize.bottom) / CharacterInvSizeY;
 
-                static float invSlotSize = double(CrInvBSize_x) / 4.2;
-                invSlotSize = double(CrInvBSize_x) / 4.2;
+                static double InvSlotSizeM = 5.4;
+                static float invSlotSize = double(CrInvBSize_x) / InvSlotSizeM;
+                invSlotSize = double(CrInvBSize_x) / InvSlotSizeM;
 
-                static int CrInvBPos_x = double(windowsize.right) / 1.61;
-                static int CrInvBPos_y = double(windowsize.bottom) / 5;
-                CrInvBPos_x = double(windowsize.right) / 1.61;
-                CrInvBPos_y = double(windowsize.bottom) / 5;
+                static double CharacterInvPosX = 1.46;
+                static double CharacterInvPosY = 5;
+                static int CrInvBPos_x = double(windowsize.right) / CharacterInvPosX;
+                static int CrInvBPos_y = double(windowsize.bottom) / CharacterInvPosY;
+                CrInvBPos_x = double(windowsize.right) / CharacterInvPosX;
+                CrInvBPos_y = double(windowsize.bottom) / CharacterInvPosY;
 
                 ImGui::SetNextWindowSize(ImVec2(CrInvBSize_x, CrInvBSize_y));
                 ImGui::SetNextWindowPos(ImVec2(CrInvBPos_x, CrInvBPos_y));
                 ImGui::Begin("Your inventory", 0, window_flags);
-                
+                static float ci_fontscale_def = float(windowsize.bottom) / 990.0;
+                ci_fontscale_def = float(windowsize.bottom) / 990.0;
+                static float ci_fontscale = float(windowsize.bottom) / 1590.0;
+                ci_fontscale = float(windowsize.bottom) / 1590.0;
+                ImGui::SetWindowFontScale(ci_fontscale);
+                std::string temp;
                 for (int i = 0; i < CharacterList::One->InvSize(); i++)
                 {
                     
-                    if ((i % 4) != 0)
+                    if ((i % 5) != 0)
                     {
                         ImGui::SameLine();
                     }
-                    ImGui::Button(CharacterList::One->rInventory(i)->GetGameItemName().c_str(), ImVec2(invSlotSize, invSlotSize));
+                    //ImGui::Button(CharacterList::One->rInventory(i)->GetGameItemName().c_str(), ImVec2(invSlotSize, invSlotSize));
+                    temp = CharacterList::One->vInventory()[i]->GetGameItemTypeTypeStr() + "###" + to_string(CharacterList::One->vInventory()[i]->GetGameItemID())+to_string(i);
+                    CharacterList::One->vInventory()[i]->SetItemUniqueID(temp);
+                    ImGui::Button(CharacterList::One->vInventory()[i]->GetGameItemUniqueID().c_str(), ImVec2(invSlotSize, invSlotSize));
+                    if (ImGui::BeginPopupContextItem())
+                    {
+                        std::cout << i << std::endl;
+                        if (ImGui::Button("Delete"))
+                        {
+                            CharacterList::One->Char_DelItem(i);
+                            ImGui::OpenPopupOnItemClick("my popup1", ImGuiPopupFlags_MouseButtonLeft);
+                            
+                            ImGui::CloseCurrentPopup();
+
+                        }
+                        if (ImGui::Button("Sell"))
+                        {
+                            ImGui::OpenPopupOnItemClick("my popup2", ImGuiPopupFlags_MouseButtonLeft);
+
+                            ImGui::CloseCurrentPopup();
+
+                        }
+                        ImGui::EndPopup();
+                    }
                     if (ImGui::IsItemHovered())
                     {
                         ImGui::BeginTooltip();
@@ -519,6 +588,10 @@ int main(int, char**)
                         ImGui::EndTooltip();
                     }
                 }
+                
+                ImGui::SetWindowFontScale(ci_fontscale_def);
+                //Is Full
+                CharacterList::One->output_InvSize();
                 ImGui::End();
             }
                 //:::: CHARACTER PROFILE

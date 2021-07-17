@@ -22,8 +22,8 @@ void GameContent::loadData_Weapons()
         
         while (!file_input.eof())
         {
-            ptr = new char[36];
-            file_input.getline(ptr, 35, '\n');
+            ptr = new char[buf_SIZE];
+            file_input.getline(ptr, buf_SIZE-1, '\n');
             serialised_data += ptr;
             delete[]ptr;
         }
@@ -31,8 +31,8 @@ void GameContent::loadData_Weapons()
         file_input.close();
         json parsed_file = json::parse(serialised_data);
         serialised_data = "";
-        ad_content::weapons_data.push_back(Game_Weapon(parsed_file["item_id"].get<int>(),parsed_file["cost"].get<int>(), parsed_file["rarity"].get<int>(), parsed_file["item_type"].get<int>(), parsed_file["item_lvl"].get<int>(), parsed_file["item_name"].get<std::string>(),
-            parsed_file["bphys_attack_dmg"].get<int>(), parsed_file["magical_attack_dmg"].get<int>(), parsed_file["weapon_type"].get<int>(), parsed_file["item_condition"].get<int>()));
+        ad_content::weapons_data.emplace_back(Game_Weapon(parsed_file["item_id"].get<int>(),parsed_file["cost"].get<int>(), parsed_file["rarity"].get<int>(), parsed_file["item_type"].get<int>(), parsed_file["item_lvl"].get<int>(), parsed_file["item_name"].get<std::string>(),
+            parsed_file["bphys_attack_dmg"].get<int>(), parsed_file["magical_attack_dmg"].get<int>(), parsed_file["weapon_type"].get<int>(), parsed_file["item_condition"].get<int>(), parsed_file["item_description"].get<std::string>()));
         
     }
 
@@ -59,8 +59,8 @@ void GameContent::loadData_Food()
 
             while (!file_input.eof())
             {
-                ptr = new char[36];
-                file_input.getline(ptr, 35, '\n');
+                ptr = new char[buf_SIZE];
+                file_input.getline(ptr, buf_SIZE-1, '\n');
                 serialised_data += ptr;
                 delete[]ptr;
             }
@@ -68,8 +68,8 @@ void GameContent::loadData_Food()
             file_input.close();
             json parsed_file = json::parse(serialised_data);
             serialised_data = "";
-            ad_content::food_data.push_back(Game_Food(parsed_file["item_id"].get<int>(), parsed_file["cost"].get<int>(), parsed_file["rarity"].get<int>(), parsed_file["item_type"].get<int>(), parsed_file["item_lvl"].get<int>(), parsed_file["item_name"].get<std::string>(),
-                parsed_file["base_heal"].get<int>(), parsed_file["nutritious"].get<int>(),parsed_file["item_condition"].get<int>()));
+            ad_content::food_data.emplace_back(Game_Food(parsed_file["item_id"].get<int>(), parsed_file["cost"].get<int>(), parsed_file["rarity"].get<int>(), parsed_file["item_type"].get<int>(), parsed_file["item_lvl"].get<int>(), parsed_file["item_name"].get<std::string>(),
+                parsed_file["base_heal"].get<int>(), parsed_file["nutritious"].get<int>(),parsed_file["item_condition"].get<int>(), parsed_file["item_description"].get<std::string>()));
 
         }
     
@@ -93,8 +93,8 @@ void GameContent::loadData_Flasks()
 
         while (!file_input.eof())
         {
-            ptr = new char[36];
-            file_input.getline(ptr, 35, '\n');
+            ptr = new char[buf_SIZE];
+            file_input.getline(ptr, buf_SIZE-1, '\n');
             serialised_data += ptr;
             delete[]ptr;
         }
@@ -102,8 +102,8 @@ void GameContent::loadData_Flasks()
         file_input.close();
         json parsed_file = json::parse(serialised_data);
         serialised_data = "";
-        ad_content::flask_data.push_back(Game_Flask(parsed_file["item_id"].get<int>(), parsed_file["cost"].get<int>(), parsed_file["rarity"].get<int>(), parsed_file["item_type"].get<int>(), parsed_file["item_lvl"].get<int>(), parsed_file["item_name"].get<std::string>(),
-            parsed_file["item_condition"].get<int>(), parsed_file["healing"].get<int>(), parsed_file["charges"].get<int>(), parsed_file["heal_type"].get<int>()));
+        ad_content::flask_data.emplace_back(Game_Flask(parsed_file["item_id"].get<int>(), parsed_file["cost"].get<int>(), parsed_file["rarity"].get<int>(), parsed_file["item_type"].get<int>(), parsed_file["item_lvl"].get<int>(), parsed_file["item_name"].get<std::string>(),
+            parsed_file["item_condition"].get<int>(), parsed_file["healing"].get<int>(), parsed_file["charges"].get<int>(), parsed_file["heal_type"].get<int>(), parsed_file["item_description"].get<std::string>()));
 
     }
 }
@@ -128,8 +128,8 @@ void GameContent::loadData_Armoury()
 
         while (!file_input.eof())
         {
-            ptr = new char[36];
-            file_input.getline(ptr, 35, '\n');
+            ptr = new char[buf_SIZE];
+            file_input.getline(ptr, buf_SIZE-1, '\n');
             serialised_data += ptr;
             delete[]ptr;
         }
@@ -137,8 +137,8 @@ void GameContent::loadData_Armoury()
         file_input.close();
         json parsed_file = json::parse(serialised_data);
         serialised_data = "";
-        ad_content::armour_data.push_back(Game_Armour(parsed_file["item_id"].get<int>(), parsed_file["cost"].get<int>(), parsed_file["rarity"].get<int>(), parsed_file["item_type"].get<int>(), parsed_file["item_lvl"].get<int>(), parsed_file["item_name"].get<std::string>(),
-            parsed_file["armour_type"].get<int>(),parsed_file["armour"].get<int>(), parsed_file["evasion"].get<int>(), parsed_file["item_condition"].get<int>()));
+        ad_content::armour_data.emplace_back(Game_Armour(parsed_file["item_id"].get<int>(), parsed_file["cost"].get<int>(), parsed_file["rarity"].get<int>(), parsed_file["item_type"].get<int>(), parsed_file["item_lvl"].get<int>(), parsed_file["item_name"].get<std::string>(),
+            parsed_file["armour_type"].get<int>(),parsed_file["armour"].get<int>(), parsed_file["evasion"].get<int>(), parsed_file["item_condition"].get<int>(), parsed_file["item_description"].get<std::string>()));
 
     }
 }
@@ -162,8 +162,8 @@ void GameContent::loadData_Loot()
 
         while (!file_input.eof())
         {
-            ptr = new char[36];
-            file_input.getline(ptr, 35, '\n');
+            ptr = new char[buf_SIZE];
+            file_input.getline(ptr, buf_SIZE-1, '\n');
             serialised_data += ptr;
             delete[]ptr;
         }
@@ -171,11 +171,12 @@ void GameContent::loadData_Loot()
         file_input.close();
         json parsed_file = json::parse(serialised_data);
         serialised_data = "";
-        ad_content::loot_data.push_back(Game_Loot(parsed_file["item_id"].get<int>(), parsed_file["cost"].get<int>(), parsed_file["rarity"].get<int>(), parsed_file["item_type"].get<int>(), parsed_file["item_lvl"].get<int>(), parsed_file["item_name"].get<std::string>(),
-            parsed_file["item_condition"].get<int>()));
+        ad_content::loot_data.emplace_back(Game_Loot(parsed_file["item_id"].get<int>(), parsed_file["cost"].get<int>(), parsed_file["rarity"].get<int>(), parsed_file["item_type"].get<int>(), parsed_file["item_lvl"].get<int>(), parsed_file["item_name"].get<std::string>(),
+            parsed_file["item_condition"].get<int>(),parsed_file["item_description"].get<std::string>()));
 
     }
 }
+
 
 void GameContent::loadData_AlchemistNPC()
 {
@@ -183,7 +184,7 @@ void GameContent::loadData_AlchemistNPC()
     std::set<std::filesystem::path> npc_alchemist_sorted_by_name;
 
     //---inserting file names into set
-    for (auto& entry : std::filesystem::directory_iterator(npc_pathlist[npc_pathlistSIZE]))
+    for (auto& entry : std::filesystem::directory_iterator(npc_pathlist[0]))
         npc_alchemist_sorted_by_name.insert(entry.path());
 
     std::ifstream file_input;
@@ -197,8 +198,8 @@ void GameContent::loadData_AlchemistNPC()
 
         while (!file_input.eof())
         {
-            ptr = new char[36];
-            file_input.getline(ptr, 35, '\n');
+            ptr = new char[buf_SIZE];
+            file_input.getline(ptr, buf_SIZE-1, '\n');
             serialised_data += ptr;
             delete[]ptr;
         }
@@ -208,7 +209,7 @@ void GameContent::loadData_AlchemistNPC()
         json parsed_file = json::parse(serialised_data);
         serialised_data = "";
 
-        ad_content::alchemist_npc_data.push_back(GameNPC_Alchemist());
+        ad_content::alchemist_npc_data.emplace_back(GameNPC_Alchemist());
     }
 }
 
@@ -218,7 +219,7 @@ void GameContent::loadData_MerchantNPC()
     std::set<std::filesystem::path> npc_merchant_sorted_by_name;
 
     //---inserting file names into set
-    for (auto& entry : std::filesystem::directory_iterator(npc_pathlist[npc_pathlistSIZE]))
+    for (auto& entry : std::filesystem::directory_iterator(npc_pathlist[4]))
         npc_merchant_sorted_by_name.insert(entry.path());
 
     std::ifstream file_input;
@@ -232,8 +233,8 @@ void GameContent::loadData_MerchantNPC()
 
         while (!file_input.eof())
         {
-            ptr = new char[36];
-            file_input.getline(ptr, 35, '\n');
+            ptr = new char[buf_SIZE];
+            file_input.getline(ptr, buf_SIZE-1, '\n');
             serialised_data += ptr;
             delete[]ptr;
         }
@@ -243,7 +244,7 @@ void GameContent::loadData_MerchantNPC()
         json parsed_file = json::parse(serialised_data);
         serialised_data = "";
 
-        ad_content::merchant_npc_data.push_back(GameNPC_Merchant());
+        ad_content::merchant_npc_data.emplace_back(GameNPC_Merchant());
     }
 }
 
@@ -253,7 +254,7 @@ void GameContent::loadData_GuardianNPC()
     std::set<std::filesystem::path> npc_guardian_sorted_by_name;
 
     //---inserting file names into set
-    for (auto& entry : std::filesystem::directory_iterator(npc_pathlist[npc_pathlistSIZE]))
+    for (auto& entry : std::filesystem::directory_iterator(npc_pathlist[3]))
         npc_guardian_sorted_by_name.insert(entry.path());
 
     std::ifstream file_input;
@@ -267,8 +268,8 @@ void GameContent::loadData_GuardianNPC()
 
         while (!file_input.eof())
         {
-            ptr = new char[36];
-            file_input.getline(ptr, 35, '\n');
+            ptr = new char[buf_SIZE];
+            file_input.getline(ptr, buf_SIZE-1, '\n');
             serialised_data += ptr;
             delete[]ptr;
         }
@@ -278,7 +279,7 @@ void GameContent::loadData_GuardianNPC()
         json parsed_file = json::parse(serialised_data);
         serialised_data = "";
 
-        ad_content::guardian_npc_data.push_back(GameNPC_Guardian());
+        ad_content::guardian_npc_data.emplace_back(GameNPC_Guardian());
     }
 }
 
@@ -288,7 +289,7 @@ void GameContent::loadData_CharmerNPC()
     std::set<std::filesystem::path> npc_charmer_sorted_by_name;
 
     //---inserting file names into set
-    for (auto& entry : std::filesystem::directory_iterator(npc_pathlist[npc_pathlistSIZE]))
+    for (auto& entry : std::filesystem::directory_iterator(npc_pathlist[1]))
         npc_charmer_sorted_by_name.insert(entry.path());
 
     std::ifstream file_input;
@@ -302,8 +303,8 @@ void GameContent::loadData_CharmerNPC()
 
         while (!file_input.eof())
         {
-            ptr = new char[36];
-            file_input.getline(ptr, 35, '\n');
+            ptr = new char[buf_SIZE];
+            file_input.getline(ptr, buf_SIZE-1, '\n');
             serialised_data += ptr;
             delete[]ptr;
         }
@@ -313,7 +314,7 @@ void GameContent::loadData_CharmerNPC()
         json parsed_file = json::parse(serialised_data);
         serialised_data = "";
 
-        ad_content::charmer_npc_data.push_back(GameNPC_Charmer());
+        ad_content::charmer_npc_data.emplace_back(GameNPC_Charmer());
     }
 }
 
@@ -323,7 +324,7 @@ void GameContent::loadData_WeaponsmithNPC()
     std::set<std::filesystem::path> npc_weaponsmith_sorted_by_name;
 
     //---inserting file names into set
-    for (auto& entry : std::filesystem::directory_iterator(npc_pathlist[npc_pathlistSIZE]))
+    for (auto& entry : std::filesystem::directory_iterator(npc_pathlist[5]))
         npc_weaponsmith_sorted_by_name.insert(entry.path());
 
     std::ifstream file_input;
@@ -337,8 +338,8 @@ void GameContent::loadData_WeaponsmithNPC()
 
         while (!file_input.eof())
         {
-            ptr = new char[36];
-            file_input.getline(ptr, 35, '\n');
+            ptr = new char[buf_SIZE];
+            file_input.getline(ptr, buf_SIZE-1, '\n');
             serialised_data += ptr;
             delete[]ptr;
         }
@@ -348,7 +349,7 @@ void GameContent::loadData_WeaponsmithNPC()
         json parsed_file = json::parse(serialised_data);
         serialised_data = "";
 
-        ad_content::weaponsmith_npc_data.push_back(GameNPC_WeaponSmith());
+        ad_content::weaponsmith_npc_data.emplace_back(GameNPC_WeaponSmith());
     }
 }
 

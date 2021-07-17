@@ -12,7 +12,7 @@ private:
     FoodCondition food_condition_enum;
 public:
     //Default constructor
-	Game_Food():Game_Item()
+	Game_Food()
 	{
 		base_heal = 2;
 		nutritious = 2;
@@ -20,7 +20,7 @@ public:
 	}
 
     //Constructor
-	Game_Food(int n_item_id, int n_cost,int n_rarity,int n_item_type,int  n_item_lvl,std::string n_item_name,int n_base_heal, int n_nutritious,int n_item_condition):Game_Item(n_item_id, n_cost, n_rarity, n_item_type, n_item_lvl, n_item_name, n_item_condition)
+	Game_Food(int n_item_id, int n_cost,int n_rarity,int n_item_type,int  n_item_lvl,std::string n_item_name,int n_base_heal, int n_nutritious,int n_item_condition, std::string n_description):Game_Item(n_item_id, n_cost, n_rarity, n_item_type, n_item_lvl, n_item_name, n_item_condition,n_description)
 	{
 		base_heal = n_base_heal;
 		nutritious = n_nutritious;
@@ -39,7 +39,8 @@ public:
 	void ShowInfo()
 	{
 		std::cout << "base_heal " << base_heal << std::endl;
-		std::cout << "nutritious " << nutritious << "\n\n";
+        std::cout << "nutritious " << nutritious << std::endl;
+        
 	}
 
     //Getters
@@ -48,6 +49,7 @@ public:
     inline const int GetGameFoodNutritious() const { return nutritious; }
 
     inline const std::string GetGameFoodConditionStr(FoodCondition Type) const;
+    std::string GetGameItemTypeTypeStr()const { return "Food"; };
 
     //Output to ImGui
     void drawIntoImgui() const;

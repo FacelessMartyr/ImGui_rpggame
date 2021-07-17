@@ -13,5 +13,6 @@ void load_gamecontent()
     c_data.loadData_Weapons();
     c_data.loadData_Flasks();
     c_data.loadData_Loot();
+    c_data.loadData_AlchemistNPC();
 
 };

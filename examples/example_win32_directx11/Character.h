@@ -98,27 +98,39 @@ public:
 
     const CharStats& Get_stats()const { return cStats; }; //returns struct obj stats
     const int InvSize() const{return ch_inv.GetInvSize(); }   //returns current inventory size
+    const int InvMaxSize() const { return ch_inv.GetInvMaxSize(); };
     const int get_wealth() const { return wealth; };
     const int get_char_lvl() const { return cXP.Lvl; };
     const int get_char_explvl() const { return cXP.ExpLVL; }
     const int get_char_exp() const { return cXP.Exp; }
     const int get_char_gender() const { return gender; }
     const int get_statpoints_left() const { return statpoints_left; }
+
+    const std::string get_itemtypestr() const {}
+
     void Char_AddItem(const int it_id) {
         ch_inv.addtoInventory(it_id);
     }
+    void Char_DelItem(const int item_Index)
+    {
+        ch_inv.DeleteItem(item_Index);
+    }
 
-    const struct std::unique_ptr<Game_Item>& rInventory(const int s_i) const { return ch_inv.rInventory(s_i); }
+    const class std::shared_ptr<Game_Item>& rInventory(const int s_i) const { return ch_inv.rInventory(s_i); }
+    const std::vector<std::shared_ptr<Game_Item>> vInventory() const { return ch_inv.vInventory(); };
 
     const void output_InvItem_Stats(const int s_i) const { return ch_inv.rInventory(s_i).get()->drawIntoImgui(); }
     const void output_InvItem_RequiredLvl(const int s_i) const;
     const void outputI_InvItem_Cost(const int s_i) const;
+    const void outputItemDesc(const int s_i) const;
+    const int output_InvSize() const;
+    
 
     const void outputItemInfo_ImGui(const int s_i) const
     {
         output_InvItem_Stats(s_i);
         output_InvItem_RequiredLvl(s_i);
-        outputI_InvItem_Cost(s_i);
+        outputItemDesc(s_i);
     }
     
     

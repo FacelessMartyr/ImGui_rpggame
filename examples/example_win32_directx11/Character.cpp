@@ -10,6 +10,12 @@ int Character::character_gainxp()
 	{
 		cXP.Exp += cXP.base_reward;
 		cXP.Lvl++;
+        if(cXP.Lvl>10)
+        {statpoints_left += 2;}
+        else
+        {statpoints_left++; }
+        
+
 		cXP.ExpLVL = ((cXP.ExpLVL / 100) * 125) + cXP.pile;
 		cXP.base_reward = ((cXP.ExpLVL - cXP.Exp) / 5);
 	}
@@ -42,6 +48,21 @@ const void Character::outputI_InvItem_Cost(const int s_i) const
     ImGui::Text("%d ", ch_inv.rInventory(s_i).get()->GetGameItemStats().cost);
     ImGui::SameLine();
     ImGui::TextColored(ItemStatsColor, "%s", "yen");
+}
+
+const void Character::outputItemDesc(const int s_i) const
+{
+    ImGui::Separator();
+    ImGui::TextColored(ItemDescColor, "%s", ch_inv.rInventory(s_i).get()->GetGameItemDesc().c_str());
+
+}
+
+const int Character::output_InvSize() const
+{
+    ImGui::Text("Avaliable slots - %d  | ", InvSize());
+    ImGui::SameLine();
+    ImGui::Text("%d", InvMaxSize());
+    return 0;
 }
 
 

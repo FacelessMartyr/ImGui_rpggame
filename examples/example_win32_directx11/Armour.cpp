@@ -1,6 +1,6 @@
 #include "Armour.h"
 
-Game_Armour::Game_Armour(int n_item_id, int n_cost, int n_rarity, int n_item_type, int n_item_lvl, std::string n_item_name,int n_armour_type, int n_armour, int n_evasion,int n_item_condition):Game_Item(n_item_id, n_cost, n_rarity, n_item_type, n_item_lvl, n_item_name,n_item_condition)
+Game_Armour::Game_Armour(int n_item_id, int n_cost, int n_rarity, int n_item_type, int n_item_lvl, std::string n_item_name,int n_armour_type, int n_armour, int n_evasion,int n_item_condition, std::string n_description):Game_Item(n_item_id, n_cost, n_rarity, n_item_type, n_item_lvl, n_item_name,n_item_condition,n_description)
 {
 	stats.armour_type = n_armour_type;
 	stats.armour = n_armour;
@@ -72,7 +72,7 @@ inline const std::string Game_Armour::GetGameArmourConditionStr(ArmourCondition 
 void Game_Armour::drawIntoImgui() const
 {
     //Item name - example : "Rusty Iron Sword" (Condition + ItemName)
-    ImGui::TextColored(ItemRarityColor[GetGameItemCondition()-1],"%s ", GetGameArmourConditionStr(GetGameArmourConditionEnum()));
+    ImGui::TextColored(ItemRarityColor[GetGameItemCondition()-1],"%s ", GetGameArmourConditionStr (GetGameArmourConditionEnum()));
     ImGui::SameLine();
     ImGui::TextColored(ItemRarityColor[GetGameItemRarity()-1], "%s", GetGameItemName()),
     ImGui::Separator();

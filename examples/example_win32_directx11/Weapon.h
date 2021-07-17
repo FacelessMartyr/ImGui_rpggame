@@ -33,8 +33,8 @@ public:
 
     //Constructor
 	Game_Weapon(int n_item_id, int n_cost, int n_rarity, int n_item_type, int n_item_lvl, std::string n_item_name,
-		int n_bphys_attack_dmg, int n_magical_attack_dmg, int n_weapon_type, int n_item_condition)
-		: Game_Item(n_item_id, n_cost, n_rarity, n_item_type, n_item_lvl, n_item_name, n_item_condition)
+		int n_bphys_attack_dmg, int n_magical_attack_dmg, int n_weapon_type, int n_item_condition, std::string n_description)
+		: Game_Item(n_item_id, n_cost, n_rarity, n_item_type, n_item_lvl, n_item_name, n_item_condition, n_description)
 	{
 		specs.physical_attack_dmg = n_bphys_attack_dmg;
 		specs.magical_attack_dmg = n_magical_attack_dmg;
@@ -57,7 +57,7 @@ public:
 
     inline const std::string GetGameWeaponConditionStr(WeaponCondition Type) const;
     inline const std::string GetGameWeaponTypeStr(WeaponType Type) const;
-
+    std::string GetGameItemTypeTypeStr()const {return GetGameWeaponTypeStr(weapon_type_enum); }
     //Output to ImGui
     void drawIntoImgui()const;
 

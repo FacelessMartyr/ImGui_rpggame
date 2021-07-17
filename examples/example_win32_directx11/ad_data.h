@@ -7,6 +7,7 @@
 #include "Armour.h"
 #include "Flask.h"
 #include "Loot.h"
+#include <vector>
 
 #include "Npc.h"
 #include "Character.h"

@@ -14,7 +14,7 @@ private:
     HealType healtype_enum;
 public:
     //Default constructor
-    Game_Flask()
+    Game_Flask():Game_Item()
     {
         heal_type = -1;
         healing = -1;
@@ -26,7 +26,7 @@ public:
 	Game_Flask(int n_item_id, int n_cost, int n_rarity, int n_item_type,
 		int n_item_lvl, std::string n_item_name,
 		int n_item_condition,int n_healing, int n_charges,
-		int n_heal_type):Game_Item(n_item_id, n_cost, n_rarity, n_item_type, n_item_lvl, n_item_name, n_item_condition)
+		int n_heal_type, std::string n_description):Game_Item(n_item_id, n_cost, n_rarity, n_item_type, n_item_lvl, n_item_name, n_item_condition, n_description)
 	{
 		heal_type = n_heal_type;
 		healing = n_healing;
@@ -43,6 +43,8 @@ public:
 
     //Destructor
     ~Game_Flask() {};
+
+    std::string GetGameItemTypeTypeStr()const { return "Flask"; };
 
     //Output in ImGui
     void drawIntoImgui()const;
