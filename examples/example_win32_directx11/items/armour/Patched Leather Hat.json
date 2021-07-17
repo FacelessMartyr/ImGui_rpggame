@@ -8,5 +8,6 @@
 	"armour":5,
 	"evasion":0,
 	"item_id": 602,
-	"item_condition":2
+	"item_condition":2,
+	"item_description":"Leather hat"
 }

@@ -7,5 +7,6 @@
 	"item_id":302,
 	"base_heal":6,
 	"nutritious":3,
-	"item_condition":1
+	"item_condition":1,
+	"item_description":"You would better cook it first XD"
 }

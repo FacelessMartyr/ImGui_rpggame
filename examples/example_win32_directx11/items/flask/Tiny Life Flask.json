@@ -8,5 +8,6 @@
 	"healing":5,
 	"charges":2,
 	"heal_type":1,
-	"item_condition":1
+	"item_condition":1,
+	"item_description":"Heals you up"
 }

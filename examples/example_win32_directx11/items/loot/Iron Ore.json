@@ -1,9 +1,10 @@
 {
 	"cost":65,
 	"rarity":1,
-	"item_type":0,
+	"item_type":2,
 	"item_lvl":1,
 	"item_name":"Iron Ore",
 	"item_id":300,
-	"item_condition":0
+	"item_condition":0,
+	"item_description":"Smelt it"
 }

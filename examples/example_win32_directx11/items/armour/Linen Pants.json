@@ -8,5 +8,6 @@
 	"armour":5,
 	"evasion":0,
 	"item_id": 601,
-	"item_condition":1
+	"item_condition":1,
+	"item_description":"I think i will a new pair of pants"
 }

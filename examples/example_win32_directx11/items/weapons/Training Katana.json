@@ -8,5 +8,6 @@
 	"magical_attack_dmg":0,
 	"weapon_type": 2,
 	"item_id": 3,
-	"item_condition":2
+	"item_condition":2,
+	"item_description":"Good for training you agility"
 }

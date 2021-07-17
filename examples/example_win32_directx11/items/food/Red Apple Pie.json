@@ -7,5 +7,6 @@
 	"item_id":301,
 	"base_heal":12,
 	"nutritious":14,
-	"item_condition":1
+	"item_condition":1,
+	"item_description":"Are you allergic to apples?"
 }

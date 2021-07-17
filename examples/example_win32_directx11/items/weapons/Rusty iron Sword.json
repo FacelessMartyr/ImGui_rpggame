@@ -8,5 +8,6 @@
 	"magical_attack_dmg":0,
 	"weapon_type": 1,
 	"item_id": 1,
-	"item_condition":1
+	"item_condition":1,
+	"item_description":"This sword have been used by your ancestors"
 }

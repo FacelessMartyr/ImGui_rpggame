@@ -8,5 +8,6 @@
 	"armour":4,
 	"evasion":0,
 	"item_id": 600,
-	"item_condition":1
+	"item_condition":1,
+	"item_description":"Fashionable"
 }

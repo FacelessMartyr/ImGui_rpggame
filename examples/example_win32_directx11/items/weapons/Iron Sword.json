@@ -8,5 +8,6 @@
 	"magical_attack_dmg":0,
 	"weapon_type": 1,
 	"item_id": 4,
-	"item_condition":2
+	"item_condition":2,
+	"item_description":"Simple iron sword"
 }
